@@ -7,6 +7,55 @@
   box-sizing: border-box;
 }
 
-.header {
-  background-color: #333;
+.sidebar {
+  margin-top: 20px 0;
+  background-color: #fff;
+  height: 700px;
+  margin: 100px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "izquierda derecha";
+}
+
+.img_izquierda {
+  grid-area: izquierda;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}
+.card_content {
+  background-color: #fff;
+  margin-right: 300px;
+}
+.card_content:nth-child(1) {
+  color: rgb(8, 8, 8);
+}
+.card_content--title {
+  font-size: 60px;
+  display: grid;
+  margin-right: 150px;
+}
+.card {
+  grid-area: derecha;
+  display: grid;
+  justify-content: center;
+  align-self: center;
+}
+.card_content--texto {
+  font-size: 20px;
+  margin: 10px;
+  justify-content: center;
+  justify-self: center;
+}
+.card_content--boton {
+  font-size: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  background-color: yellow;
+  width: 130px;
+  height: 50px;
 }
