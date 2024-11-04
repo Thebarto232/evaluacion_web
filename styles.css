@@ -122,10 +122,10 @@ header {
 }
 
 .img_izquierda {
-  grid-area: izquierda;
+ 
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: grid;
 }
 
 .card__image-img {
