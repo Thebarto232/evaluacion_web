@@ -1,1 +1,12 @@
 @import url(styles.css);
+
+:root {
+    --background-color: #fff;
+    --background-color-light: #e5e5e5;
+    --background-color-Try: #e2e2e2;
+    --highlight-color: #eaca1c;
+    --text-color: #000;
+    --text-color-light: #fff;
+    --font-family: "Helvetica", Arial, sans-serif;
+  }
+  
