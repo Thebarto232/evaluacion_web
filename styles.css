@@ -299,10 +299,8 @@ width: 100%;
 }
 
 .we-image-section {
-  margin-right: 150px;
-  width: 1060px;
-  height: 700px;
-  margin-bottom: 100px;
+  width: 100%;
+  max-width: 800px;
 }
 /* we */
 
@@ -322,8 +320,8 @@ width: 100%;
 }
 .img_happy {
   grid-area: izquierda;
-  width: 700px;
-  height: 800px;
+  width: 100%;
+  max-width: 800px;
 }
 .Happiness_content {
   background-color: var(--background-color-light);
@@ -437,9 +435,9 @@ width: 100%;
 }
 
 .team__image-img {
-  width: 800px;
-  height: 700px;
-  margin-left: 170px;
+  width: 100%;
+  max-width: 800px;
+  margin-left: 80px;
 }
 
 .team__card {
@@ -453,7 +451,7 @@ width: 100%;
 }
 
 .team__title {
-  font-size: 60px;
+  font-size: 70px;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -490,6 +488,8 @@ width: 100%;
 }
 
 .Try__content {
+  width: 100%;
+  max-width: 800px;
   color: var(--text-color);
 }
 
@@ -512,10 +512,10 @@ width: 100%;
   cursor: pointer;
 }
 
-.Try__image img {
-  width: 800px;
-  height: 800px;
-  margin-right: 100px;
+.Try__image-img {
+  width: 100%;
+  max-width: 800px;
+  margin-left: 120px;
 }
 /* TRY OUR */
 
@@ -724,29 +724,21 @@ width: 100%;
 
 
 /* media queries */
-@media (max-width: 435px) and (max-height: 580px) {
-  .container, .sidebar, .centrado, .we-container, .HAPPY, .ABOUT, .team, .TRY, .formulario-contenedor, .contact-section, .footer{
+@media (max-width: 436px) and (max-height: 587px) {
+   .ABOUT, .contact-section, .footer{
     padding: 10px;
   }
 
-  .header__container {
-    flex-direction: row;
-  }
-
-  .navigation__item {
-    width: auto;
-  }
-
-  .card_content--title, .centrado__title, .we-title, .Happiness_content--title, .About_content--title, .team__title, .Try__title, .contact-title{
+  .About_content--title, .contact-title{
     font-size: 24px;
   }
 
-  ,card_content--texto, .centrado__texto, .we-text, .Happiness_content--texto, .About_content--texto, .team__text, .Try__text, .contact-description {
+  .About_content--texto, .contact-description {
     font-size: 14px;
   }
 
-  .card__image-img, .we-image-section, .img_happy, .img_about, .team__image-img, .Try__image-img, .contact-map-img{
-    width: 100%;
-    height: auto;
+  .img_about, .contact-map-img{
+     height: auto;
+     width: 100%;
   }
 }
