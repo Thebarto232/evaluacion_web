@@ -640,7 +640,7 @@ width: 100%;
   margin: 20px 0;
 }
 
-.contact-map img {
+.contact-map-img {
   height: 680px;
   width: 1200px;
 }
@@ -725,31 +725,27 @@ width: 100%;
 
 /* media queries */
 @media (max-width: 435px) and (max-height: 580px) {
-  .container, .sidebar, .centrado, .TRY, .ABOUT, .contact-section {
+  .container, .sidebar, .centrado, .we-container, .HAPPY, .ABOUT, .team, .TRY, .formulario-contenedor, .contact-section, .footer{
     padding: 10px;
   }
 
   .header__container {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .navigation__item {
     width: auto;
   }
 
-  .centrado__title {
-    font-size: 25px;
-  }
-
-  .we-title, .Happiness_content--title, .Try__title, .contact-title {
+  .card_content--title, .centrado__title, .we-title, .Happiness_content--title, .About_content--title, .team__title, .Try__title, .contact-title{
     font-size: 24px;
   }
 
-  .we-text, .Happiness_content--texto, .Try__text, .contact-description {
+  ,card_content--texto, .centrado__texto, .we-text, .Happiness_content--texto, .About_content--texto, .team__text, .Try__text, .contact-description {
     font-size: 14px;
   }
 
-  .img_about, .team__image-img, .card__image-img, .Try__image img {
+  .card__image-img, .we-image-section, .img_happy, .img_about, .team__image-img, .Try__image-img, .contact-map-img{
     width: 100%;
     height: auto;
   }
