@@ -723,3 +723,34 @@ width: 100%;
 /* Footer */
 
 
+/* media queries */
+@media (max-width: 435px) and (max-height: 580px) {
+  .container, .sidebar, .centrado, .TRY, .ABOUT, .contact-section {
+    padding: 10px;
+  }
+
+  .header__container {
+    flex-direction: column;
+  }
+
+  .navigation__item {
+    width: auto;
+  }
+
+  .centrado__title {
+    font-size: 25px;
+  }
+
+  .we-title, .Happiness_content--title, .Try__title, .contact-title {
+    font-size: 24px;
+  }
+
+  .we-text, .Happiness_content--texto, .Try__text, .contact-description {
+    font-size: 14px;
+  }
+
+  .img_about, .team__image-img, .card__image-img, .Try__image img {
+    width: 100%;
+    height: auto;
+  }
+}
