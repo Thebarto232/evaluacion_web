@@ -622,6 +622,10 @@ width: 100%;
   color: var(--text-color);
 }
 
+.contact {
+  margin-bottom: 20px;
+}
+
 .contact-title {
   font-size: 60px;
   margin: 0;
