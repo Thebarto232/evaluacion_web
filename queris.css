@@ -1,17 +1,4 @@
 @import url(styles.css);
-@media all and (min-width: 1024px) and (max-width: 1280px){
+@media screen {()
   
-  
-  .sidebar{
-    flex-direction: column;
-    width: 100%;
-  }
-  .Graphic{
-    max-width: 100%;
-    height: auto;
-    flex-direction: column;   
-  }
- 
 }
- 
- 
