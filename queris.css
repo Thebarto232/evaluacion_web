@@ -263,4 +263,48 @@
     padding: 8px 16px;
   }
   /* ABOUT */
+
+  /* OUT TEAM */
+  .team {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+  }
+
+  .team__image {
+    margin: 0;
+    width: 100%;
+  }
+
+  .team__image-img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .team__card {
+    padding: 0;
+    width: 100%;
+  }
+
+  .team__content {
+    text-align: center;
+    margin: 0;
+  }
+
+  .team__title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .team__text {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .team__button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  /* OUT TEAM */
 }
