@@ -402,4 +402,34 @@
     margin-top: 15px;
   }
   /* Formulario - Subcribete */
+
+  /* CONTACT */
+  .contact-section {
+    padding: 20px;
+  }
+
+  .contact-title {
+    font-size: 30px;
+  }
+
+  .contact-description {
+    font-size: 16px;
+    margin: 10px 0 15px;
+  }
+
+  .contact-map {
+    flex-direction: column;
+    margin: 15px 0;
+  }
+
+  .contact-map img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  /* CONTACT */
 }
