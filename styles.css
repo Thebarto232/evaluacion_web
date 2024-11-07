@@ -695,6 +695,12 @@ header {
   justify-content: space-between;
 }
 
+.icons {
+  color: var(--highlight-color);
+  width: 20px;
+  height: 20px;
+}
+
 .redes__linea {
   border-right: 1px solid var(--text-color-light);
   gap: 20px;
