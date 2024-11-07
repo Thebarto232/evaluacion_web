@@ -695,11 +695,21 @@ header {
   justify-content: space-between;
 }
 
-.icons {
+.bx bxl-twitter {
   color: var(--highlight-color);
   width: 20px;
   height: 20px;
+  Martín: 5px;
 }
+
+.bx bxl-instagram {
+  color: var(--highlight-color);
+  width: 20px;
+  height: 20px;
+  Martín: 5px;
+}
+
+.
 
 .redes__linea {
   border-right: 1px solid var(--text-color-light);
