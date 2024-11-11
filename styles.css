@@ -725,6 +725,40 @@ header {
 /* Footer */
 
 @media (max-width: 800px) {
+  /* header */
+  .header__container {
+    flex-direction: row;
+    padding: 10px 0;
+  }
+
+  .header__left {
+    justify-content: center;
+    flex: 1;
+  }
+
+  .logo__img {
+    width: 50px;
+    margin-right: 0;
+  }
+
+  .navigation {
+    gap: 10px;
+  }
+
+  .navigation__item {
+    width: 100%;
+  }
+
+  .navigation__link {
+    min-height: 60px;
+    min-width: 100%;
+  }
+
+  .navigation__span {
+    font-size: 0.9rem;
+  }
+  /* header */
+  
   /* sidebar */
   .sidebar {
     display: flex;
