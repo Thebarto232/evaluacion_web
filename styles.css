@@ -7,11 +7,14 @@
 }
 
 body {
-  background-color: var(--background-color);
   font-family: var(--font-family);
+  overflow: hidden; /* Oculta el scroll */
+  overflow-y: scroll; /* Permite el desplazamiento vertical */
 }
 
-
+body::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en navegadores basados en Webkit */
+}
 
 /* header */
 header {
