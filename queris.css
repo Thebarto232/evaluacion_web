@@ -1,4 +1,4 @@
-@media (max-width: 436px) and (max-height: 587px) {
+@media (max-width: 800px) {
   /* sidebar */
   .sidebar {
     display: flex;
@@ -9,6 +9,10 @@
     height: auto;
     margin-top: 100px;
     padding: 10px;
+  }
+  .header__container{
+    display: flex;
+   
   }
 
   .img_izquierda {

@@ -11,12 +11,7 @@ body {
   font-family: var(--font-family);
 }
 
-.container {
-  max-width: 1800px;
-  width: 100%;
-  margin: auto;
-  padding: 0 10px;
-}
+
 
 /* header */
 header {
@@ -30,10 +25,15 @@ header {
   position: fixed;
 }
 
-.header__container {
+.header__container {/* contenedor del header su pocion */
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin: 0 10px;
+  
+  
+
 }
 
 .header__left {
@@ -670,15 +670,16 @@ header {
 }
 .redes__title {
   font-size: 20px;
-  color: var(--text-color-light);
+  color: var(--highlight-color);
 }
 .redes__yourname {
-  color: var(--text-color-light);
+  color: var(--highlight-color);
   gap: 20px;
 }
 .redes {
   display: flex;
   margin-top: 45px;
+  justify-content: space-between;
 }
 .redes__items {
   background-color: var(--highlight-color);
@@ -713,6 +714,10 @@ header {
 .redes__copyright {
   display: flex;
   gap: 10px;
+}
+.footer__parafo{
+  font-size: 15px;
+  color : var(--highlight-color);
 }
 /* Footer */
 
