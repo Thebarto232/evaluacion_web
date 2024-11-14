@@ -1,1191 +1,2433 @@
 @import url(costom.css);
 
+
+
 * {
+
   margin: 0;
+
   padding: 0;
+
   box-sizing: border-box;
+
 }
+
+
 
 body {
+
+  background-color: var(--background-color);
+
   font-family: var(--font-family);
-  overflow: hidden; /* Oculta el scroll */
-  overflow-y: scroll; /* Permite el desplazamiento vertical */
+
 }
 
-body::-webkit-scrollbar {
-  display: none; /* Oculta la barra de desplazamiento en navegadores basados en Webkit */
-}
+
+
+
+
+
 
 /* header */
+
 header {
+
   grid-area: header;
+
   width: 100%;
+
   background-color: var(--highlight-color);
+
   padding: 0 10px;
+
   top: 0;
+
   z-index: 100;
+
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
   position: fixed;
+
+  overflow-x: scroll;/*elimina el esapacion */
+
 }
 
-.header__container {
-  /* contenedor del header su pocion */
+
+
+.header__container {/* contenedor del header su pocion */
+
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
   padding: 5px;
+
   margin: 0 10px;
+
+  
+
+  
+
+
+
 }
+
+
 
 .header__left {
+
   display: flex;
+
   align-items: center;
+
   flex: 0 1 380px;
+
 }
+
+
 
 .logo__img {
+
   width: 70px;
+
   margin-right: 15px;
+
   display: block;
+
 }
+
+
 
 .navigation {
+
   display: flex;
+
   align-items: center;
+
   gap: 20px;
+
 }
+
+
 
 .navigation__list {
+
   display: flex;
+
   align-items: center;
+
   list-style: none;
+
 }
+
+
 
 .navigation__item {
+
   display: flex;
+
   align-items: center;
+
   width: 110px;
+
 }
+
+
 
 .navigation__link {
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   flex-direction: column;
+
   gap: 2px;
+
   text-align: center;
+
   font-weight: 400;
+
   min-height: 75px;
+
   min-width: 85px;
+
   text-decoration: none;
+
   color: var(--text-color);
+
   position: relative;
+
 }
+
+
 
 .navigation__link:hover {
+
   color: var(--text-color);
+
 }
+
+
 
 .navigation__span {
+
   font-size: 1rem;
+
 }
+
+
 
 .navigation__link::after {
+
   content: "";
+
   width: 0;
+
   height: 2px;
+
   background-color: var(--text-color);
+
   position: absolute;
+
   bottom: 0px;
+
   transition: width 0.3s;
+
 }
+
 /* header */
 
+
+
 /* sidebar */
+
 .sidebar {
+
   margin-top: 20px 0;
+
   background-color: var(--background-color);
+
   height: 900px;
+
   margin: 100px;
+
   justify-content: center;
+
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
+
   grid-template-rows: repeat(1, 1fr);
+
   grid-template-areas: "izquierda derecha";
+
 }
 
+
+
 .img_izquierda {
+
   grid-area: izquierda;
+
   justify-content: center;
+
   align-items: center;
-  display: grid;
+
+  display: grid;  
+
+}
+
+
+
+.img_izquierdaimg_izquierda--pocion{
+
+  margin: 5px; /* para  que no quede tan pegado */
+
+  width: 100%;  /*ocupee el ancho de la imagen */ 
+
 }
 
 .card__image-img {
+
   width: 800px;
+
   height: 700px;
+
 }
+
+
 
 .card_content {
+
   background-color: var(--background-color);
+
   margin-right: 300px;
+
 }
+
 .card_content:nth-child(1) {
+
   color: var(--text-color);
+
 }
+
 .card_content--title {
+
   font-size: 80px;
+
   display: grid;
+
   margin-left: 20px;
+
 }
+
 .card {
+
   grid-area: derecha;
+
   display: grid;
+
   justify-content: center;
+
   align-self: center;
+
 }
+
 .card_content--texto {
+
   font-size: 20px;
+
   margin: 10px;
+
   justify-content: center;
+
   justify-self: center;
+
   margin-left: 20px;
+
 }
+
 .card_content--boton {
+
   font-size: 20px;
+
   display: grid;
+
   justify-content: center;
+
   align-items: center;
+
   margin: 20px;
+
   border: none;
+
   background-color: var(--highlight-color);
+
   width: 130px;
+
   height: 50px;
+
 }
+
 /* sidebar */
 
+
+
 /* centrado */
+
 .centrado__title {
+
   width: 500px;
+
   height: 100px;
+
   font-size: 50px;
+
   color: var(--highlight-color);
+
 }
+
+
 
 .centrado {
+
   position: absolute;
+
   top: -180px;
+
   left: 180px;
+
   height: 400px;
+
   width: 80%;
+
   display: flex;
+
   align-items: center;
+
   background-color: var(--background-color-light);
+
   justify-content: space-around;
+
 }
+
+
 
 .centrado__texto {
+
   margin-top: 40px;
+
   width: 300px;
+
   height: 85px;
+
   font-size: 20px;
+
 }
+
+
 
 .centrado__boton {
+
   font-size: 20px;
+
   border: none;
+
   background-color: var(--background-color-light);
+
   color: var(--text-color);
+
 }
+
+
 
 .pruba {
+
   display: flex;
+
   align-items: center;
+
   width: 600px;
+
   height: 400px;
+
   background-color: var(--highlight-color);
+
   margin: 90px;
+
   top: 50%;
+
 }
+
 .derecha {
+
   padding: 30px;
+
   background-color: var(--highlight-color);
+
   margin-top: 200px;
+
   width: 100%;
+
   height: 15vh;
+
   position: relative;
+
 }
+
+
 
 .centrado__posicion {
+
   display: flex;
+
   align-items: center;
+
   max-width: 600px;
+
   width: 100%;
+
 }
+
+
 
 .Graphic {
+
   max-width: 300px;
+
   width: 100%;
+
   /* margin-left: 150px; */
+
 }
+
 /* centrado */
 
+
+
 /* we */
+
 .we-container {
+
   background-color: var(--highlight-color);
+
   height: 1200px;
+
   width: 100%;
+
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   grid-template-rows: 1fr 1fr;
+
   grid-template-areas:
+
     "arriba arriba"
+
     "abajo-izquierda abajo-derecha";
+
 }
+
+
 
 .we-title {
+
   grid-area: arriba;
+
   margin-left: 150px;
+
   margin-top: 200px;
+
   font-size: 80px;
+
   width: 700px;
+
 }
+
+
 
 .we-content {
+
   grid-area: abajo-izquierda;
+
   background-color: var(--highlight-color);
+
   margin-left: 150px;
+
 }
+
+
 
 .we-text {
+
   font-size: 24px;
+
   margin: 10px;
+
   margin-right: 65px;
+
 }
+
+
 
 .we-button {
+
   font-size: 20px;
+
   display: grid;
+
   justify-content: center;
+
   align-items: center;
+
   margin: 10px;
+
   margin-top: 40px;
+
   border: none;
+
   background-color: var(--text-color);
+
   color: var(--text-color-light);
+
   width: 180px;
+
   height: 50px;
+
 }
+
+
 
 .we-image-container {
+
   grid-area: abajo-derecha;
+
   align-self: end;
+
   justify-self: end;
+
 }
+
+
 
 .we-image-section {
+
   margin-right: 150px;
+
   width: 1060px;
+
   height: 700px;
+
   margin-bottom: 100px;
+
 }
+
 /* we */
 
+
+
 /* Happy */
+
 .HAPPY {
+
   margin-top: 20px 0;
+
   background-color: var(--background-color-light);
+
   height: 800px;
+
   width: 1400px;
+
   margin: 100px;
+
   margin-left: 300px;
+
   box-shadow: 20px 30px 20px rgb(182, 182, 182);
+
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
+
   grid-template-rows: repeat(1, 1fr);
+
   grid-template-areas: "izquierda derecha";
+
 }
+
 .img_happy {
+
   grid-area: izquierda;
+
   width: 700px;
+
   height: 800px;
+
 }
+
 .Happiness_content {
+
   background-color: var(--background-color-light);
+
   margin-right: 300px;
+
 }
+
+
 
 .Happiness_content--title {
+
   font-size: 80px;
+
   color: var(--highlight-color);
+
   width: 600px;
+
 }
+
 .Happiness {
+
   grid-area: derecha;
+
   display: grid;
+
   margin: 30px;
+
 }
+
 .Happiness_content--texto {
+
   font-size: 25px;
+
   margin: 10px;
+
   justify-content: center;
+
   justify-self: center;
+
   margin-right: 150px;
+
 }
+
 .Happiness_content--boton {
+
   font-size: 20px;
+
   display: grid;
+
   justify-content: center;
+
   align-items: center;
+
   margin: 10px;
+
   margin-top: 40px;
+
   border: none;
+
   background-color: var(--text-color);
+
   color: var(--text-color-light);
+
   width: 180px;
+
   height: 50px;
+
 }
+
+
 
 .Graphic_Happy {
+
   width: 300px;
+
   height: 300px;
+
   margin-left: 300px;
+
   margin-top: 50px;
+
 }
+
 /* Happy */
 
+
+
 /* ABOUT US */
+
 .ABOUT {
+
   background-color: var(--text-color);
+
   color: var(--text-color-light);
+
   display: grid;
+
   grid-template-columns: 1fr;
+
   justify-items: center;
+
   align-items: center;
+
   padding: 20px;
+
   gap: 20px;
+
   text-align: center;
+
 }
+
+
 
 .About_us {
+
   margin-bottom: 20px;
+
 }
+
+
 
 .About_content--title {
+
   font-size: 40px;
+
   margin-top: 50px;
+
   color: var(--highlight-color);
+
   margin: 10px 0;
+
 }
+
+
 
 .About_content--texto {
+
   font-size: 16px;
+
   max-width: 600px;
+
   margin: 10px auto;
+
   color: var(--text-color-light);
+
 }
+
+
 
 .img_container {
+
   display: flex;
+
   justify-content: center;
+
 }
+
+
 
 .img_about {
+
   height: 680px;
+
   width: 1200px;
+
 }
+
+
 
 .About_content--boton {
+
   font-size: 20px;
+
   background-color: var(--highlight-color);
+
   color: var(--text-color);
+
   padding: 10px 20px;
+
   border: none;
+
   cursor: pointer;
+
 }
+
 /* ABOUT US */
 
+
+
 /* OUR TEAM */
+
 .team {
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   padding: 50px;
+
   height: 900px;
+
 }
+
+
 
 .team__image {
+
   flex: 1;
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
+
 }
+
+
 
 .team__image-img {
+
   width: 800px;
+
   height: 700px;
+
   margin-left: 170px;
+
 }
+
+
 
 .team__card {
+
   flex: 1;
+
   padding-left: 50px;
+
 }
+
+
 
 .team__content {
+
   text-align: left;
+
   margin-left: 30px;
+
 }
+
+
 
 .team__title {
+
   font-size: 60px;
+
   font-weight: bold;
+
   margin-bottom: 20px;
+
 }
+
+
 
 .team__text {
+
   font-size: 20px;
+
   color: var(--text-color);
+
   margin-bottom: 20px;
+
   margin-right: 400px;
+
 }
+
+
 
 .team__button {
+
   font-size: 20px;
+
   background-color: var(--highlight-color);
+
   color: var(--text-color);
+
   padding: 10px 20px;
+
   border: none;
+
   cursor: pointer;
+
 }
+
 /* OUR TEAM */
 
+
+
 /* TRY OUR */
+
 .TRY {
+
   display: flex;
+
   align-items: center;
+
   background-color: var(--background-color-Try);
+
   padding: 50px;
+
 }
+
+
 
 .Try__card {
+
   max-width: 50%;
+
   padding-right: 50px;
+
   margin-left: 100px;
+
 }
+
+
 
 .Try__content {
+
   color: var(--text-color);
+
 }
+
+
 
 .Try__title {
+
   font-size: 60px;
+
   margin-bottom: 20px;
+
 }
+
+
 
 .Try__text {
+
   font-size: 20px;
+
   margin-bottom: 20px;
+
 }
+
+
 
 .Try__button {
+
   font-size: 20px;
+
   background-color: var(--highlight-color);
+
   color: var(--text-color);
+
   border: none;
+
   padding: 10px 20px;
+
   cursor: pointer;
+
 }
+
+
 
 .Try__image img {
+
   width: 800px;
+
   height: 800px;
+
   margin-right: 100px;
+
 }
+
 /* TRY OUR */
 
+
+
 /* Formulario - Subcribete */
+
 .formulario__nombres-contenedor {
+
   display: flex;
+
   justify-content: space-between;
+
 }
 
+
+
 .formulario-contenedor {
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   margin: 0 auto;
+
   height: 720px;
+
   width: 800px;
+
   gap: 25px;
+
 }
+
+
 
 .formulario-name {
+
   display: flex;
+
   flex-direction: column;
+
   width: 220px;
+
   gap: 10px;
+
 }
+
+
 
 .formulario {
+
   padding: 40px 20px;
+
   display: flex;
+
   flex-direction: column;
+
   width: 500px;
+
   justify-content: center;
+
   gap: 20px;
+
   background: var(--text-color);
+
 }
+
 .fomurlario__nombres {
+
   color: var(--text-color-light);
+
 }
+
 .fondo_formulario--pasword {
+
   border: solid 2px var(--background-color-light);
+
 }
+
 .fondo_formulario {
+
   background-color: var(--text-color);
+
   border: solid 2px var(--background-color-light);
+
 }
+
+
 
 .formulario-contenedor {
+
   background-color: var(--background-color);
+
 }
+
 .fomurlario__pasworrd {
+
   color: var(--text-color-light);
+
   background-color: var(--text-color);
+
 }
+
+
 
 .fomurlario__mesaje--title {
+
   color: var(--text-color-light);
+
 }
+
 .formulario__paraffo {
+
   color: var(--text-color-light);
+
 }
+
 .formulario__mensaje {
+
   width: 460px;
+
   height: 100px;
+
   background-color: var(--text-color);
+
   border: solid 2px var(--background-color-light);
+
 }
+
+
 
 .subcribete {
+
   justify-content: center;
+
   align-items: center;
+
   width: 600px;
+
 }
+
 .subcribete__content {
+
   padding: 30px 10px;
+
   display: flex;
+
   flex-direction: column;
+
   width: 500px;
+
   justify-content: center;
+
   gap: 20px;
+
 }
+
 .subcribete__title {
+
   font-size: 50px;
+
   color: var(--highlight-color);
+
   margin-top: -40px;
+
 }
+
 .subcribete__text {
+
   font-size: 20px;
+
   margin-top: -1px;
+
 }
+
 .subcribete__buton {
+
   font-size: 20px;
+
   background-color: var(--text-color);
+
   color: var(--text-color-light);
+
   width: 200px;
+
   margin-top: 20px;
+
 }
+
 /* Formulario - Subcribete */
 
+
+
 /* CONTACT */
+
 .contact-section {
+
   background-color: var(--highlight-color);
+
   text-align: center;
+
   padding: 30px;
+
   color: var(--text-color);
+
 }
+
+
 
 .contact-title {
+
   font-size: 60px;
+
   margin: 0;
+
   font-weight: bold;
+
 }
+
+
 
 .contact-description {
+
   font-size: 20px;
+
   color: var(--background-color-light);
+
   margin: 10px 0 20px;
+
 }
+
+
 
 .contact-map {
+
   display: flex;
+
   justify-content: center;
+
   margin: 20px 0;
+
 }
+
+
 
 .contact-map img {
+
   height: 680px;
+
   width: 1200px;
+
 }
+
+
 
 .contact-button {
+
   background-color: var(--text-color);
+
   color: var(--text-color-light);
+
   border: none;
+
   padding: 10px 20px;
+
   cursor: pointer;
+
   font-size: 20px;
+
 }
+
 /* CONTACT */
 
+
+
 /* Footer */
+
 .footer {
+
   background-color: var(--text-color);
+
   width: 100%;
+
   height: 80vh;
+
   padding: 30px;
+
   position: relative;
+
 }
+
 .footer_img {
+
   display: flex;
+
   justify-content: center;
+
   margin: 30px;
+
 }
+
 .footer_informacion {
+
   display: flex;
+
   gap: 25px;
+
   margin-top: 80px;
+
 }
+
 .footer__parafo {
+
   display: flex;
+
   color: var(--text-color-light);
+
   justify-content: center;
+
   align-items: center;
+
 }
+
+
 
 .footer__intermedio {
+
   background-color: solid 3px var(--background-color);
+
   margin-top: 180px;
-}
-.redes__title {
-  font-size: 20px;
-  color: var(--highlight-color);
-}
-.redes__yourname {
-  color: var(--highlight-color);
-  gap: 20px;
-}
-.redes {
-  display: flex;
-  margin-top: 45px;
-  justify-content: space-between;
-}
-.redes__items {
-  background-color: var(--highlight-color);
-  margin: 5px;
-  justify-content: center;
-  align-items: center;
-}
-.redes__content {
-  display: flex;
-  height: 25px;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
+
 }
 
-.box_icons {
+.redes__title {
+
+  font-size: 20px;
+
   color: var(--highlight-color);
-  width: 20px;
-  height: 20px;
-  margin: 7px;
+
 }
+
+.redes__yourname {
+
+  color: var(--highlight-color);
+
+  gap: 20px;
+
+}
+
+.redes {
+
+  display: flex;
+
+  margin-top: 45px;
+
+  justify-content: space-between;
+
+}
+
+.redes__items {
+
+  background-color: var(--highlight-color);
+
+  margin: 5px;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+.redes__content {
+
+  display: flex;
+
+  height: 25px;
+
+  gap: 20px;
+
+  justify-content: center;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+}
+
+
+
+.box_icons{
+
+  color: var(--highlight-color);
+
+  width: 20px;
+
+  height: 20px;
+
+  margin: 7px;
+
+}
+
+
+
+
+
+
+
+
 
 .redes__linea {
+
   border-right: 1px solid var(--text-color-light);
+
   gap: 20px;
+
 }
+
+
 
 .redes__copyright {
+
   display: flex;
+
   gap: 10px;
+
 }
-.footer__parafo {
+
+.footer__parafo{
+
   font-size: 15px;
-  color: var(--highlight-color);
+
+  color : var(--highlight-color);
+
 }
+
 /* Footer */
 
-@media (max-width: 800px) {
+
+
+
+
+/* .Graphic_Happy{      
+
+  display: flex;
+
+  justify-content:  center;
+
+  align-items: center;
+
+} */
+
+.Happinnes__content--centro{
+
+  display: flex;
+
+  justify-content: center;
+
+}
+
+
+
+
+
+
+
+@media (max-width: 800px) { /* Aplica estilos solo en pantallas con un ancho máximo de 800px */
+
+
+
   /* header */
+
   .header__container {
-    flex-direction: row;
-    padding: 10px 0;
+
+    flex-direction: row; /* Coloca los elementos en fila */
+
+    padding: 10px 0; /* Agrega espacio arriba y abajo */
+
+    
+
+    
+
+    
+
+
+
   }
+
+
 
   .header__left {
-    justify-content: center;
-    flex: 1;
+
+    justify-content: center; /* Centra el contenido */
+
+    flex: 1; /* Ocupa todo el espacio horizontal disponible */
+
   }
+
+
 
   .logo__img {
-    width: 50px;
-    margin-right: 0;
+
+    width: 50px; /* Ajusta el ancho de la imagen del logo */
+
+    margin-right: 0; /* Elimina el margen derecho */
+
   }
+
+
 
   .navigation {
-    gap: 10px;
+
+    gap: 10px; /* Espacio entre los elementos de navegación */
+
   }
+
+
 
   .navigation__item {
-    width: 100%;
+
+    width: 100%; /* Ocupa todo el ancho disponible */
+
   }
+
+
 
   .navigation__link {
-    min-height: 60px;
-    min-width: 100%;
+
+    min-height: 60px; /* Altura mínima de 60px */
+
+    min-width: 100%; /* Ancho mínimo del 100% */
+
   }
+
+
 
   .navigation__span {
+
+    font-size: 0.9rem; /* Reduce el tamaño de fuente */
+
     margin: 7px;
+
     font-size: 3vw;
+
     white-space: nowrap;
+
   }
+
   /* header */
 
+  
+
   /* sidebar */
+
   .sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
-    background-color: var(--background-color);
-    height: auto;
-    margin-top: 100px;
-    padding: 10px;
+
+    display: flex; /* Usa flexbox para el diseño */
+
+    flex-direction: column; /* Ordena los elementos en columna */
+
+    align-items: center; /* Centra los elementos horizontalmente */
+
+    margin: 20px 0; /* Margen superior e inferior de 20px */
+
+    background-color: var(--background-color); /* Color de fondo */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    margin-top: 100px; /* Margen superior adicional de 100px */
+
+    padding: 10px; /* Espaciado interno de 10px */
+
   }
+
+
 
   .img_izquierda {
-    align-self: center;
-    justify-self: center;
-    width: 100%;
-    margin-bottom: 20px;
+
+    align-self: center; /* Centra la imagen */
+
+    justify-self: center; /* Alinea la imagen en el centro */
+
+    width: 100%; /* Ancho completo */
+
+    margin-bottom: 20px; /* Margen inferior de 20px */
+
   }
+
+
 
   .card__image-img {
-    width: 90%;
-    height: auto;
-    max-width: 300px;
+
+    width: 90%; /* Ocupa el 90% del ancho disponible */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    max-width: 300px; /* Ancho máximo de 300px */
+
   }
+
+
 
   .card_content {
-    width: 100%;
-    margin: 10px 0;
-    text-align: center;
-    background-color: var(--background-color);
+
+    width: 100%; /* Ancho completo */
+
+    margin: 10px 0; /* Margen superior e inferior de 10px */
+
+    text-align: center; /* Centra el texto */
+
+    background-color: var(--background-color); /* Color de fondo */
+
   }
+
+
 
   .card_content--title {
-    font-size: 6vw;
-    margin-top: 10px;
-    width: 90%;
-    text-align: center;
+
+    font-size: 6vw; /* Tamaño de fuente en relación con el ancho de la pantalla */
+
+    margin-top: 10px; /* Margen superior de 10px */
+
+    width: 90%; /* Ocupa el 90% del ancho disponible */
+
+    text-align: center; /* Centra el texto */
+
   }
+
+
 
   .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 10px;
+
+    display: flex; /* Usa flexbox para el diseño */
+
+    flex-direction: column; /* Ordena los elementos en columna */
+
+    align-items: center; /* Centra los elementos horizontalmente */
+
+    width: 100%; /* Ancho completo */
+
+    margin-top: 10px; /* Margen superior de 10px */
+
   }
+
+
 
   .card_content--texto {
-    font-size: 4vw;
-    margin: 10px auto;
-    width: 90%;
-    text-align: center;
+
+    font-size: 4vw; /* Tamaño de fuente adaptable al ancho de la pantalla */
+
+    margin: 10px auto; /* Margen superior e inferior de 10px */
+
+    width: 90%; /* Ocupa el 90% del ancho disponible */
+
+    text-align: center; /* Centra el texto */
+
   }
+
+
 
   .card_content--boton {
-    font-size: 4vw;
-    margin: 20px auto;
-    width: 80%;
-    height: 40px;
-    background-color: var(--highlight-color);
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    font-size: 4vw; /* Tamaño de fuente adaptable */
+
+    margin: 20px auto; /* Margen superior e inferior de 20px */
+
+    width: 80%; /* Ocupa el 80% del ancho disponible */
+
+    height: 40px; /* Altura de 40px */
+
+    background-color: var(--highlight-color); /* Color de fondo destacado */
+
+    border: none; /* Sin borde */
+
+    display: flex; /* Usa flexbox para centrar el contenido */
+
+    align-items: center; /* Centra el contenido verticalmente */
+
+    justify-content: center; /* Centra el contenido horizontalmente */
+
   }
+
   /* sidebar */
 
+
+
   /* Centrado */
+
   .centrado__title {
-    width: 100%;
-    font-size: 6vw;
-    height: auto;
-    text-align: center;
+
+    width: 100%; /* Ancho completo */
+
+    font-size: 6vw; /* Tamaño de fuente adaptable */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    text-align: center; /* Centra el texto */
+
   }
+
+
 
   .centrado {
-    position: relative;
-    top: 0;
-    left: 40px;
-    height: auto;
-    flex-direction: column;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
+
+    position: relative; /* Posición relativa para ajustar desplazamiento */
+
+    top: 0; /* Posiciona en la parte superior */
+
+    left: 40px; /* Desplazamiento hacia la derecha */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    flex-direction: column; /* Ordena los elementos en columna */
+
+    padding: 10px; /* Espaciado interno de 10px */
+
+    align-items: center; /* Centra los elementos horizontalmente */
+
+    justify-content: center; /* Centra el contenido verticalmente */
+
   }
+
+
 
   .centrado__posicion {
-    width: 100%;
-    max-width: 90%;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+
+    width: 100%; /* Ancho completo */
+
+    max-width: 90%; /* Ancho máximo del 90% */
+
+    flex-direction: column; /* Ordena en columna */
+
+    align-items: center; /* Centra los elementos */
+
+    text-align: center; /* Centra el texto */
+
   }
+
+
 
   .centrado__texto {
-    margin-top: 15px;
-    width: 100%;
-    font-size: 4.5vw;
-    height: auto;
-    text-align: center;
+
+    margin-top: 15px; /* Margen superior de 15px */
+
+    width: 100%; /* Ancho completo */
+
+    font-size: 4.5vw; /* Tamaño de fuente adaptable */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    text-align: center; /* Centra el texto */
+
   }
+
+
 
   .centrado__boton {
-    font-size: 4.5vw;
-    padding: 12px 20px;
-    width: 90%;
-    margin-top: 10px;
+
+    font-size: 4.5vw; /* Tamaño de fuente adaptable */
+
+    padding: 12px 20px; /* Espaciado interno */
+
+    width: 90%; /* Ocupa el 90% del ancho disponible */
+
+    margin-top: 10px; /* Margen superior de 10px */
+
   }
+
+
 
   .pruba {
-    width: 100%;
-    height: auto;
-    margin: 15px 0;
-    flex-direction: column;
-    padding: 15px;
-    align-items: center;
-    justify-content: center;
+
+    width: 100%; /* Ancho completo */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    margin: 15px 0; /* Margen superior e inferior de 15px */
+
+    flex-direction: column; /* Ordena los elementos en columna */
+
+    padding: 15px; /* Espaciado interno de 15px */
+
+    align-items: center; /* Centra los elementos horizontalmente */
+
+    justify-content: center; /* Centra el contenido verticalmente */
+
   }
+
+
 
   .derecha {
-    padding: 10px;
-    margin-top: 30px;
-    height: auto;
-    text-align: center;
+
+    padding: 10px; /* Espaciado interno de 10px */
+
+    margin-top: 30px; /* Margen superior de 30px */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    text-align: center; /* Centra el texto */
+
   }
+
+
 
   .Graphic {
-    width: 90%;
-    margin: 0 auto;
-    display: block;
+
+    width: 90%; /* Ancho del 90% */
+
+    margin: 0 auto; /* Centra el gráfico */
+
+    display: block; /* Bloque gráfico */
+
   }
+
   /* Centrado */
 
+
+
   /* we */
+
   .we-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 20px;
+
+    display: flex; /* Flexbox para el diseño */
+
+    flex-direction: column; /* Ordena en columna */
+
+    align-items: center; /* Centra horizontalmente */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    padding: 20px; /* Espaciado interno de 20px */
+
   }
+
+
 
   .we-title {
-    margin-left: 0;
-    margin-top: 20px;
-    font-size: 6vw;
-    width: 90%;
-    text-align: center;
+
+    margin-left: 0; /* Sin margen izquierdo */
+
+    margin-top: 20px; /* Margen superior de 20px */
+
+    font-size: 6vw; /* Tamaño de fuente adaptable */
+
+    width: 90%; /* Ancho del 90% */
+
+    text-align: center; /* Centra el texto */
+
   }
 
-  .we-content {
-    margin-left: 0;
-    width: 100%;
-    margin-top: 20px;
-    text-align: center;
+
+
+ .we-content {
+
+    margin-left: 0; /* Sin margen izquierdo */
+
+    width: 100%; /* Ancho completo */
+
+    margin-top: 20px; /* Margen superior de 20px */
+
+    text-align: center; /* Centra el texto */
+
   }
+
+
 
   .we-text {
-    font-size: 4vw;
-    margin: 10px auto;
-    margin-right: 0;
-    width: 90%;
+
+    font-size: 4vw; /* Tamaño de fuente adaptable */
+
+    margin: 10px auto; /* Margen superior e inferior de 10px */
+
+    margin-right: 0; /* Sin margen derecho */
+
+    width: 90%; /* Ancho del 90% */
+
   }
+
+
 
   .we-button {
-    font-size: 4vw;
-    margin: 20px auto;
-    width: 80%;
-    height: 40px;
+
+    font-size: 4vw; /* Tamaño de fuente adaptable */
+
+    margin: 20px auto; /* Margen superior e inferior de 20px */
+
+    width: 80%; /* Ancho del 80% */
+
+    height: 40px; /* Altura de 40px */
+
   }
+
+
 
   .we-image-container {
-    align-self: center;
-    justify-self: center;
-    margin-top: 20px;
+
+    align-self: center; /* Centra el contenedor de la imagen */
+
+    justify-self: center; /* Centra horizontalmente dentro de su contenedor */
+
+    margin-top: 20px; /* Margen superior de 20px */
+
   }
+
+
 
   .we-image-section {
-    margin: 0;
-    width: 90%;
-    height: auto;
-    margin-left: 15px;
+
+    margin: 0; /* Sin margen */
+
+    width: 90%; /* Ancho del 90% */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    margin-left: 15px; /* Margen izquierdo de 15px */
+
   }
+
   /* we */
 
+
+
   /* HAPPY */
+
   .HAPPY {
-    margin: 0;
-    padding: 10px;
-    height: auto;
-    width: 100%;
-    box-shadow: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    margin: 0; /* Sin margen */
+
+    padding: 10px; /* Espaciado interno de 10px */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    width: 100%; /* Ancho completo */
+
+    box-shadow: none; /* Sin sombra */
+
+    display: flex; /* Flexbox para el diseño */
+
+    flex-direction: column; /* Ordena en columna */
+
+    align-items: center; /* Centra horizontalmente */
+
   }
+
+
 
   .img_happy {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+
+    width: 100%; /* Ancho completo */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    margin-bottom: 20px; /* Margen inferior de 20px */
+
   }
+
+
 
   .Happiness_content {
-    margin: 0;
-    width: 100%;
-    padding: 10px;
+
+    margin: 0; /* Sin margen */
+
+    width: 100%; /* Ancho completo */
+
+    padding: 10px; /* Espaciado interno de 10px */
+
   }
+
+
 
   .Happiness_content--title {
-    font-size: 36px;
-    width: 100%;
-    text-align: center;
+
+    font-size: 36px; /* Tamaño de fuente de 36px */
+
+    width: 100%; /* Ancho completo */
+
+    text-align: center; /* Centra el texto */
+
   }
+
+
 
   .Happiness_content--texto {
-    font-size: 16px;
-    margin: 10px 0;
-    margin-right: 0;
-    text-align: center;
+
+    font-size: 16px; /* Tamaño de fuente de 16px */
+
+    margin: 10px 0; /* Margen superior e inferior de 10px */
+
+    margin-right: 0; /* Sin margen derecho */
+
+    text-align: center; /* Centra el texto */
+
   }
+
+
 
   .Happiness_content--boton {
-    font-size: 16px;
-    width: 100%;
-    height: 40px;
-    margin: 20px 0;
+
+    font-size: 16px; /* Tamaño de fuente de 16px */
+
+    width: 100%; /* Ancho completo */
+
+    height: 40px; /* Altura de 40px */
+
+    margin: 20px 0; /* Margen superior e inferior de 20px */
+
   }
+
+
 
   .Graphic_Happy {
-    width: 80%;
-    height: auto;
-    margin: 20px 0;
+
+    width: 80%; /* Ancho del 80% */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    margin: 20px 0; /* Margen superior e inferior de 20px */
+
   }
+
   /* HAPPY */
 
+
+
   /* ABOUT */
+
   .ABOUT {
-    padding: 10px;
-    gap: 15px;
+
+    padding: 10px; /* Espaciado interno de 10px */
+
+    gap: 15px; /* Espacio entre elementos de 15px */
+
   }
+
+
 
   .About_content--title {
-    font-size: 24px;
-    margin-top: 20px;
+
+    font-size: 24px; /* Tamaño de fuente de 24px */
+
+    margin-top: 20px; /* Margen superior de 20px */
+
   }
+
+
 
   .About_content--texto {
-    font-size: 14px;
-    max-width: 100%;
-    margin: 10px 0;
+
+    font-size: 14px; /* Tamaño de fuente de 14px */
+
+    max-width: 100%; /* Ancho máximo completo */
+
+    margin: 10px 0; /* Margen superior e inferior de 10px */
+
   }
+
+
 
   .img_about {
-    width: 100%;
-    height: auto;
+
+    width: 100%; /* Ancho completo */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
   }
+
+
 
   .About_content--boton {
-    font-size: 16px;
-    padding: 8px 16px;
+
+    font-size: 16px; /* Tamaño de fuente de 16px */
+
+    padding: 8px 16px; /* Espaciado interno */
+
   }
+
   /* ABOUT */
 
+
+
   /* OUR TEAM */
+
   .team {
-    flex-direction: column;
-    padding: 20px;
-    height: auto;
+
+    flex-direction: column; /* Ordena en columna */
+
+    padding: 20px; /* Espaciado interno de 20px */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
   }
+
+
 
   .team__image {
-    margin: 0;
-    width: 100%;
+
+    margin: 0; /* Sin margen */
+
+    width: 100%; /* Ancho completo */
+
   }
+
+
 
   .team__image-img {
-    width: 100%;
-    height: auto;
-    margin: 0;
+
+    width: 100%; /* Ancho completo */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    margin: 0; /* Sin margen */
+
   }
+
+
 
   .team__card {
-    padding: 0;
-    width: 100%;
+
+    padding: 0; /* Sin espaciado interno */
+
+    width: 100%; /* Ancho completo */
+
   }
+
+
 
   .team__content {
-    text-align: center;
-    margin: 0;
+
+    text-align: center; /* Centra el texto */
+
+    margin: 0; /* Sin margen */
+
   }
+
+
 
   .team__title {
-    font-size: 30px;
-    margin-bottom: 15px;
+
+    font-size: 30px; /* Tamaño de fuente de 30px */
+
+    margin-bottom: 15px; /* Margen inferior de 15px */
+
   }
+
+
 
   .team__text {
-    font-size: 16px;
-    margin: 10px 0;
+
+    font-size: 16px; /* Tamaño de fuente de 16px */
+
+    margin: 10px 0; /* Margen superior e inferior de 10px */
+
   }
+
+
 
   .team__button {
-    font-size: 16px;
-    padding: 8px 16px;
+
+    font-size: 16px; /* Tamaño de fuente de 16px */
+
+    padding: 8px 16px; /* Espaciado interno */
+
   }
+
   /* OUR TEAM */
 
+
+
   /* TRY OUR */
+
   .TRY {
-    flex-direction: column;
-    padding: 20px;
-    align-items: center;
+
+    flex-direction: column; /* Ordena en columna */
+
+    padding: 20px; /* Espaciado interno de 20px */
+
+    align-items: center; /* Centra los elementos horizontalmente */
+
   }
+
+
 
   .Try__card {
-    max-width: 100%;
-    padding-right: 0;
-    margin: 0;
-    text-align: center;
+
+    max-width: 100%; /* Ancho máximo completo */
+
+    padding-right: 0; /* Sin espaciado a la derecha */
+
+    margin: 0; /* Sin margen */
+
+    text-align: center; /* Centra el texto */
+
   }
+
+
 
   .Try__title {
-    font-size: 30px;
-    margin-bottom: 15px;
+
+    font-size: 30px; /* Tamaño de fuente de 30px */
+
+    margin-bottom: 15px; /* Margen inferior de 15px */
+
   }
+
+
 
   .Try__text {
-    font-size: 16px;
-    margin-bottom: 15px;
+
+    font-size: 16px; /* Tamaño de fuente de 16px */
+
+    margin-bottom: 15px; /* Margen inferior de 15px */
+
   }
+
+
 
   .Try__button {
-    font-size: 16px;
-    padding: 8px 16px;
+
+    font-size: 16px; /* Tamaño de fuente de 16px */
+
+    padding: 8px 16px; /* Espaciado interno */
+
   }
+
+
 
   .Try__image img {
-    width: 100%;
-    height: auto;
-    margin-right: 0;
-    margin-top: 20px;
+
+    width: 100%; /* Ancho completo */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    margin-right: 0; /* Sin margen derecho */
+
+    margin-top: 20px; /* Margen superior de 20px */
+
   }
+
   /* TRY OUR */
 
+
+
   /* Formulario - Subcribete */
+
   .formulario__nombres-contenedor {
-    flex-direction: column;
-    gap: 10px;
+
+    flex-direction: column; /* Ordena en columna */
+
+    gap: 10px; /* Espacio entre elementos de 10px */
+
   }
+
+
 
   .formulario-contenedor {
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    gap: 15px;
+
+    flex-direction: column; /* Ordena en columna */
+
+    width: 100%; /* Ancho completo */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
+    padding: 20px; /* Espaciado interno de 20px */
+
+    gap: 15px; /* Espacio entre elementos de 15px */
+
   }
+
+
 
   .formulario-name {
-    width: 100%;
+
+    width: 100%; /* Ancho completo */
+
   }
+
+
 
   .formulario {
-    width: 100%;
-    padding: 20px 10px;
-    gap: 15px;
+
+    width: 100%; /* Ancho completo */
+
+    padding: 20px 10px; /* Espaciado interno */
+
+    gap: 15px; /* Espacio entre elementos de 15px */
+
   }
+
+
 
   .formulario__mensaje {
-    width: 100%;
-    height: auto;
+
+    width: 100%; /* Ancho completo */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
   }
+
+
 
   .subcribete {
-    width: 100%;
-    padding: 0;
+
+    width: 100%; /* Ancho completo */
+
+    padding: 0; /* Sin espaciado interno */
+
   }
+
+
 
   .subcribete__content {
-    width: 100%;
-    padding: 20px;
-    gap: 15px;
+
+    width: 100%; /* Ancho completo */
+
+    padding: 20px; /* Espaciado interno de 20px */
+
+    gap: 15px; /* Espacio entre elementos de 15px */
+
   }
+
+
 
   .subcribete__title {
-    font-size: 30px;
-    margin-top: 0;
+
+    font-size: 30px; /* Tamaño de fuente de 30px */
+
+    margin-top: 0; /* Sin margen superior */
+
   }
+
+
 
   .subcribete__text {
-    font-size: 16px;
-    margin-top: 0;
+
+    font-size: 16px; /* Tamaño de fuente de 16px */
+
+    margin-top: 0; /* Sin margen superior */
+
   }
 
-  .subcribete__buton {
-    font-size: 16px;
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
+
+
+.subcribete__buton {
+
+    font-size: 16px; /* Tamaño de fuente de 16px */
+
+    width: 100%; /* Ancho completo */
+
+    padding: 10px; /* Espaciado interno de 10px */
+
+    margin-top: 15px; /* Margen superior de 15px */
+
   }
+
   /* Formulario - Subcribete */
 
+
+
   /* CONTACT */
+
   .contact-section {
-    padding: 20px;
+
+    padding: 20px; /* Espaciado interno de 20px */
+
   }
+
+
 
   .contact-title {
-    font-size: 30px;
+
+    font-size: 30px; /* Tamaño de fuente de 30px */
+
   }
+
+
 
   .contact-description {
-    font-size: 16px;
-    margin: 10px 0 15px;
+
+    font-size: 16px; /* Tamaño de fuente de 16px */
+
+    margin: 10px 0 15px; /* Margen superior de 10px y margen inferior de 15px */
+
   }
+
+
 
   .contact-map {
-    flex-direction: column;
-    margin: 15px 0;
+
+    flex-direction: column; /* Ordena en columna */
+
+    margin: 15px 0; /* Margen superior e inferior de 15px */
+
   }
+
+
 
   .contact-map img {
-    width: 100%;
-    height: auto;
+
+    width: 100%; /* Ancho completo */
+
+    height: auto; /* Ajusta la altura automáticamente */
+
   }
 
+
+
   .contact-button {
-    font-size: 16px;
-    padding: 8px 16px;
+
+    font-size: 16px; /* Tamaño de fuente de 16px */
+
+    padding: 8px 16px; /* Espaciado interno */
+
   }
+
   /* CONTACT */
-}
+
+    }
