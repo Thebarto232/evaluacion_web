@@ -755,7 +755,8 @@ header {
   }
 
   .navigation__span {
-    font-size: 0.9rem;
+    margin: 6px;
+    font-size: 3vw;
   }
   /* header */
   
