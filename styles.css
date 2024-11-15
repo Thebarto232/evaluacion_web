@@ -572,6 +572,7 @@ header {
 .fondo_formulario {
   background-color: var(--text-color); /* Color de fondo del formulario */
   border: solid 2px var(--background-color-light); /* Borde con un color personalizado */
+  color: var(--text-color-light); /* Color del texto usando la variable personalizada */
 }
 
 .fomurlario__pasworrd {
