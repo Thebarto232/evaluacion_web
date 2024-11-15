@@ -593,6 +593,7 @@ header {
   height: 100px; /* Altura fija */
   background-color: var(--text-color); /* Color de fondo */
   border: solid 2px var(--background-color-light); /* Borde con un color personalizado */
+  color: var(--text-color-light); /* Color del texto usando variable personalizada */
 }
 
 .subcribete {
