@@ -11,6 +11,11 @@
 body {
   background-color: var(--background-color); /* Establece el color de fondo del cuerpo usando una propiedad CSS personalizada */
   font-family: var(--font-family); /* Define la fuente del cuerpo usando una propiedad personalizada */
+  overflow-x: hidden; /*Desaparece la barra espaciadora de la parte Horizontal*/
+}
+
+body::-webkit-scrollbar { /* Para navegadores basados en WebKit como Chrome, Safari */
+  display: none; /*Hace invisible la barra espaciadora*/
 }
 
 /* header */
@@ -23,7 +28,6 @@ header {
   z-index: 100; /* Asegura que el header esté siempre por encima de otros elementos con un z-index alto */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Sombra suave bajo el header para darle un efecto elevado */
   position: fixed; /* Hace que el header permanezca fijo al hacer scroll */
-  overflow-x: scroll; /* Permite el desplazamiento horizontal si el contenido excede el ancho */
 }
 
 .header__container {
