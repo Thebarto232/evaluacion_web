@@ -791,9 +791,8 @@ header {
   }
 
   .navigation__span {
-    font-size: 0.9rem; /* Reduce el tamaño de fuente */
     margin: 7px;
-    font-size: 3vw;
+    font-size: 3vw;/* Reduce el tamaño de fuente */
     white-space: nowrap;
   }
   /* header */
@@ -981,13 +980,17 @@ header {
     margin-top: 20px; /* Margen superior de 20px */
   }
 
-  .we-image-section {
-    margin: 0; /* Sin márgenes */
+  .we-image-container {
+    align-self: center; /* Centra el contenedor de la imagen */
+    justify-self: center; /* Centra horizontalmente dentro de su contenedor */
+    margin-top: 20px; /* Margen superior de 20px */
   }
 
-  .we-image {
+  .we-image-section {
+    margin: 0; /* Sin margen */
     width: 90%; /* Ancho del 90% */
-    margin-bottom: 20px; /* Margen inferior de 20px */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin-left: 15px; /* Margen izquierdo de 15px */
   }
   /* we */
 
